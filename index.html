@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Coding Quiz</title>
+
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="index.html" class="logo">Coding Quiz</a>
+        <a href="highscores.html" class="scores">View Highscores</a>
+      </nav>
+      <div class="timer-container">
+        <span id="time">0</span>
+        <span class="label">Time:</span>
+      </div>
+    </header>
+
+    <main>
+      <div class="wrapper">
+        <div id="start-screen" class="screen">
+          <h1>Coding Quiz Challenge</h1>
+          <p>
+            Here is a quick quiz to test your Javascript knowledge! Answer each question within 15 seconds then record your highscore. Good luck!
+          </p>
+          <button id="start" class="button">Start Quiz</button>
+        </div>
+
+        <div id="questions" class="screen hide">
+          <h2 id="question-title"></h2>
+          <div id="choices" class="choices"></div>
+        </div>
+
+        <div id="end-screen" class="screen hide">
+          <h2>All done!</h2>
+          <p>Your final score is <span id="final-score"></span>.</p>
+          <form id="initials-form">
+            <label for="initials">Enter initials:</label>
+            <input type="text" id="initials" maxlength="3" />
+            <button type="submit" id="submit" class="button">Submit</button>
+          </form>
+        </div>
+
+        <div id="feedback" class="feedback hide"></div>
+      </div>
+    </main>
+
+    <script src="./js/questions.js"></script>
+    <script src="./js/index.js"></script>
+  </body>
+</html>
